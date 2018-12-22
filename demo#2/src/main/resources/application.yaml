@@ -1,0 +1,20 @@
+server:
+ port: 8084
+
+spring:
+ datasource:
+   url: jdbc:postgresql://localhost/demo
+   username: admin
+   password: admin
+   driver-class-name: org.postgresql.Driver
+
+ jpa:
+     hibernate:
+       ddl-auto: create
+     properties:
+       hibernate:
+#       jdbc.lob.non_contextual_creation: true
+         dialect: org.hibernate.spatial.dialect.postgis.PostgisDialect
+
+     show-sql: false
+#     spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
